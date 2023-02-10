@@ -1,4 +1,4 @@
-public static String makeBrowserTypeOnUserAgent(String ua) {
+    public static String makeBrowserTypeOnUserAgent(String ua) {
         ua = ua.toLowerCase();
         String browser = "";
  	if (ua.indexOf("daumapps") > 0) {
@@ -12,16 +12,16 @@ public static String makeBrowserTypeOnUserAgent(String ua) {
             browser = "IE";
         }else if ( ua.indexOf("edge") > 0 || ua.indexOf("edg") > 0){
             browser = "EDGE";
+        }else if (ua.indexOf("naver") > 0) {
+            browser = "Naver inApp";
         }else if ( ua.indexOf("whale") > 0) {
         	browser = "Whale";
-        }else if ( ua.indexOf("samsung") > 0){
+        }else if ( ua.indexOf("samsungbrowser") > 0){
             browser = "SamsungBrowser";
         }else if ( ua.indexOf("kakaotalk") > 0) {
             browser = "Kakaotalk inApp";
         }else if ( ua.indexOf("line") > 0){
             browser = "Line inApp";
-        }else if (ua.indexOf("naver") > 0) {
-            browser = "Naver inApp";
         } else if (ua.indexOf("opera") > 0 || ua.indexOf("opr") > 0) {
             browser = "Opera";
         } else if (ua.indexOf("firefox") > 0) {
