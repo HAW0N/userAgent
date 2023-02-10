@@ -1,0 +1,44 @@
+public static String makeBrowserTypeOnUserAgent(String ua) {
+        ua = ua.toLowerCase();
+        String browser = "";
+ 	if (ua.indexOf("daumapps") > 0) {
+            browser = "Daum inApp";
+        }else if (ua.indexOf("bot") > 0 || ua.indexOf("spider") > 0
+           || ua.indexOf("slurp") > 0 || ua.indexOf("crawl") > 0 || ua.indexOf("externalhit") > 0
+	|| ua.indexOf("yahoo") >0 || ua.indexOf("archive") > 0 || ua.indexOf("daum") > 0
+	|| ua.indexOf("empas") >0 || ua.indexOf("google") > 0 ) {
+            browser = "Bot";
+        }else if (ua.indexOf("mise") > 0 || ua.indexOf("trident") > 0) {
+            browser = "IE";
+        }else if ( ua.indexOf("edge") > 0 || ua.indexOf("edg") > 0){
+            browser = "EDGE";
+        }else if ( ua.indexOf("whale") > 0) {
+        	browser = "Whale";
+        }else if ( ua.indexOf("samsung") > 0){
+            browser = "SamsungBrowser";
+        }else if ( ua.indexOf("kakaotalk") > 0) {
+            browser = "Kakaotalk inApp";
+        }else if ( ua.indexOf("line") > 0){
+            browser = "Line inApp";
+        }else if (ua.indexOf("naver") > 0) {
+            browser = "Naver inApp";
+        } else if (ua.indexOf("opera") > 0 || ua.indexOf("opr") > 0) {
+            browser = "Opera";
+        } else if (ua.indexOf("firefox") > 0) {
+            browser = "Firefox";
+        } else if (ua.indexOf("gsa") > 0) {
+	browser = "Google inApp";
+        } else if (ua.indexOf("safari") > 0) {
+            if (ua.indexOf("chrome") > 0) {
+                browser = "Chrome";
+            } else {
+                browser = "Safari";
+            }
+        } else if (ua.indexOf("iphone") > 0) {
+            browser = "Safari";
+        
+        } else {
+            browser = "Other";
+        }
+        return browser;
+    }
